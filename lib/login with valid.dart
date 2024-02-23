@@ -48,8 +48,8 @@ class _login_validState extends State<login_valid> {
                   },
 
                   decoration: InputDecoration(
-                      labelText: "UserName",
-                      hintText: "username",
+                      labelText: "Email id",
+                      hintText: "Email id",
                       prefixIcon: Icon(Icons.person),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(50)
