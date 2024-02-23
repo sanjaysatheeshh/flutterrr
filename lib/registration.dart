@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +11,14 @@ void main() {
   ));
 }
 
-class Registerpage extends StatelessWidget {
+class Registerpage extends StatefulWidget {
+  @override
+  State<Registerpage> createState() => _RegisterpageState();
+}
+
+class _RegisterpageState extends State<Registerpage> {
+  GlobalKey<FormState>Formkey=GlobalKey();
+  bool Showpass= true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,19 +38,32 @@ class Registerpage extends StatelessWidget {
                       color: Colors.green),
                 )),
             Padding(
-              padding: EdgeInsets.only(top: 20, left: 70, right: 70),
-              child: TextField(
-                decoration: InputDecoration(
-                    labelText: "UserName",
-                    hintText: "username",
-                    prefixIcon: Icon(Icons.person),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50))),
+              padding: EdgeInsets.only(top: 50, left: 70, right: 70),
+              child: Form(
+                key: Formkey,
+                child: TextFormField(
+                  validator: (Name){
+                    if(Showpass==true){
+                      Showpass=false;
+                    }
+                    else{
+                      Showpass=true;
+                    }
+                  },
+                  decoration: InputDecoration(
+                      labelText: "UserName",
+                      hintText: "username",
+                      prefixIcon: Icon(Icons.person),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50))),
+                ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20, left: 70, right: 70),
+              padding: EdgeInsets.only(top: 50, left: 70, right: 70),
               child: TextField(
+                obscureText: Showpass,
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
                     labelText: "Email",
                     hintText: "Email",
@@ -51,11 +73,11 @@ class Registerpage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20, left: 70, right: 70),
+              padding: EdgeInsets.only(top: 50, left: 70, right: 70),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "Password",
-                  hintText: "password",
+                  hintText: "Password",
                   prefixIcon: Icon(Icons.password),
                   suffixIcon: Icon(Icons.visibility_off),
                   border: OutlineInputBorder(
@@ -65,11 +87,11 @@ class Registerpage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  top: 20, left: 70, right: 70, bottom: 50),
+                  top: 50, left: 70, right: 70, bottom: 50),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "Confirm password",
-                  hintText: "Cm password",
+                  hintText: "Confirm password",
                   prefixIcon: Icon(Icons.password),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50)),
@@ -82,8 +104,12 @@ class Registerpage extends StatelessWidget {
                     textStyle:
                     TextStyle(fontSize: 20, fontWeight: FontWeight.w400)),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => loginpage()));
+                  final valid=Formkey.currentState!.validate();
+                  if(valid){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>loginpage()));
+                  }
+
+
                 },
                 child: Text("Register")),
           ],

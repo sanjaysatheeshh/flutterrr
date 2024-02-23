@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterrr/registration.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'homepage.dart';
@@ -104,7 +105,7 @@ class _login_validState extends State<login_valid> {
               }, child: const Text("Login")),
 
               TextButton(onPressed: (){
-
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Registerpage()));
 
               }, child: const Text("Not a user, create new Account"))
 
