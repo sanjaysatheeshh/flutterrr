@@ -2,18 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MaterialApp(home:loginpage(),));
+  runApp(MaterialApp(home:loginp(),));
 }
-class loginpage extends StatelessWidget {
+class loginp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+  {
     return Scaffold(
       body: Container(color: Colors.cyan,
         child: Column(
           children: [
             Padding(
               padding: EdgeInsets.all(8.0),
-              child: Image(image: AssetImage(""),
+              child: Image(image: AssetImage("assets/images/pexels-pixabay-460672.jpg"),
                 height: 100,
                 width: 100,),
             ),
@@ -50,13 +52,10 @@ class loginpage extends StatelessWidget {
                 child: Text("login")),
             TextButton(onPressed: () {},
                 child: Text("Not a user,Create new user"))
-
-
           ],
-
-
         ),
       ),
     );
+  }
   }
 }

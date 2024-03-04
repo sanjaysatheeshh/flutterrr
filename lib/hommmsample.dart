@@ -14,10 +14,10 @@ class hommmsample extends StatefulWidget {
   }
 
 class _hommmsample extends State<hommmsample> {
-  var image = ["assets/images/pexels-asif-methar-789750.jpg","assets/images/pexels-paul-theodor-oja-3493651.jpg","assets/images/pexels-pixabay-460672.jpg","assets/images/pexels-adi-k-2382868.jpg"];
-  var place = ["Delhi", "Finland", "London", "Vancouver"];
-  var country = ['India', 'Europe', 'UK', 'Canada'];
-  var info = ['32.9 mill', '5.54 mill', '8.8 mill', '2.6 mill'];
+  var image = ["assets/images/pexels-asif-methar-789750.jpg","assets/images/pexels-paul-theodor-oja-3493651.jpg","assets/images/pexels-pixabay-460672.jpg","assets/images/pexels-adi-k-2382868.jpg","assets/images/pexels-nout-gons-378570.jpg"];
+  var place = ["Delhi", "Finland", "London", "Vancouver","Newyork"];
+  var country = ['India', 'Europe', 'UK', 'Canada','USA'];
+  var info = ['32.9 mill', '5.54 mill', '8.86 mill', '2.6 mill','23.3 mill'];
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +44,13 @@ class _hommmsample extends State<hommmsample> {
     width: 200,
     child: Card(
     shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(10)),
+    borderRadius: BorderRadius.circular(10)
+    ),
     child: Image(
     image: AssetImage(image[index]),
     fit: BoxFit.fill,
-    )),
+    )
+    ),
     ),
       Container(
         height: 100,

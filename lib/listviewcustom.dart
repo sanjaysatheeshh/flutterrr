@@ -27,7 +27,7 @@ class listviewcustom extends StatelessWidget{
               IconButton(onPressed: (){}, icon: Icon(Icons.edit)),
               IconButton(onPressed: (){}, icon: Icon(Icons.delete))
             ],
-          ),
+          ),//method 1
            ),
          ),
        );
@@ -49,7 +49,7 @@ class listviewcustom extends StatelessWidget{
          //child: Text("Hello"),
          //color: Colors.red,
        //),
-     //]
+     //]//method 2
        // List.generate(7, (index) => Card(child: Text("Hello"),))
      //)
      //),

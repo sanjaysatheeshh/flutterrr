@@ -1,62 +1,62 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 void main(){
-  runApp(MaterialApp(home:loginpage(),));
+  runApp(MaterialApp(home:loginpage() ,));
 }
-class loginpage extends StatelessWidget {
+class loginpage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(color: Colors.cyan,
+      body:  Container(color: Colors.cyan,
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Image(image: AssetImage("assets/images/pexels-pixabay-258174.jpg"),
-                height: 100,
-                width: 100,),
+
+            const Padding(
+              padding: EdgeInsets.only(top: 100,),
+              child: Image(image: AssetImage("assets/images/image2.jpg"),height: 100,width: 100,),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20, right: 40, left: 40,),
+              padding: EdgeInsets.only(top: 20,left: 70,right: 70),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Username",
+                    labelText: "UserName",
                     hintText: "username",
                     prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)
+                        borderRadius: BorderRadius.circular(50)
                     )
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(
-                top: 20, right: 40, left: 40, bottom: 50,),
+              padding: EdgeInsets.only(top: 20,left: 70,right: 70,bottom: 50),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Password",
-                    hintText: "password",
-                    prefixIcon: Icon(Icons.password),
-                    suffixIcon: Icon(Icons.visibility_off),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50))
+                  labelText: "Password",
+                  hintText: "password",
+                  prefixIcon: Icon(Icons.password),
+                  suffixIcon: Icon(Icons.visibility_off),
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
                 ),
               ),
             ),
-            ElevatedButton(onPressed: () {
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor:
+                    Colors.green,textStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.w400)) ,onPressed: (){
 
-            },
-                child: Text("login")),
-            TextButton(onPressed: () {},
-                child: Text("Not a user,Create new user"))
+            }, child: Text("Login")),
+
+            TextButton(onPressed: (){
+
+            }, child: Text("Not a user, create new Account"))
+
 
 
           ],
-
-
         ),
       ),
     );
   }
+
 }
