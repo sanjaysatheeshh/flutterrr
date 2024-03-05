@@ -27,9 +27,6 @@ class stagexx extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                // borderRadius: BorderRadius.only(
-                //     bottomLeft: Radius.circular(20),
-                //     bottomRight: Radius.circular(20)),
                 color: Colors.blue[900],
               ),
             ),

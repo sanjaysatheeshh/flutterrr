@@ -17,7 +17,7 @@ class stagex extends StatelessWidget{
     child: Card(
     child: Column(
     children: [
-    Image(image: AssetImage("assets/images/pexels-jonathan-meyer-612999.jpg"),fit: BoxFit.contain),
+    Image(image: AssetImage("assets/images/pexels-jonathan-meyer-612999.jpg"),height: 100,width: double.infinity,),
       Text("havasu falls"),
     ],
     ),
@@ -34,7 +34,7 @@ class stagex extends StatelessWidget{
     StaggeredGridTile.count(crossAxisCellCount: 2, mainAxisCellCount: 3,
     child: Card(
     child: Column(
-    children: [Text("portugal"),
+    children: [
     Padding(
     padding: const EdgeInsets.only(bottom: 30),
       child:Image(image: AssetImage("assets/images/pexels-nuno-veludo-3558637.jpg"),fit: BoxFit.contain),
