@@ -5,6 +5,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 void main() {
   runApp(MaterialApp(
     home: stagex(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
