@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,8 +15,8 @@ class Registerpage extends StatefulWidget {
 }
 
 class _RegisterpageState extends State<Registerpage> {
-  GlobalKey<FormState>Formkey=GlobalKey();
-  bool Showpass= true;
+  GlobalKey<FormState> formkey=GlobalKey();
+  bool showpass=true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,48 +36,46 @@ class _RegisterpageState extends State<Registerpage> {
                       color: Colors.green),
                 )),
             Padding(
-              padding: EdgeInsets.only(top: 50, left: 70, right: 70),
-              child: Form(
-                key: Formkey,
-                child: TextFormField(
-                  validator: (Name){
-                    if(Showpass==true){
-                      Showpass=false;
-                    }
-                    else{
-                      Showpass=true;
-                    }
-                  },
-                  decoration: InputDecoration(
-                      labelText: "UserName",
-                      hintText: "username",
-                      prefixIcon: Icon(Icons.person),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(50))),
+              padding: EdgeInsets.only(top: 20, left: 70, right: 70),
+              child: TextField(
+                decoration: InputDecoration(
+                    labelText: "UserName",
+                    hintText: "username",
+                    prefixIcon: Icon(Icons.person),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50))
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 50, left: 70, right: 70),
+              padding: EdgeInsets.only(top: 20, left: 70, right: 70),
               child: TextField(
-                obscureText: Showpass,
-                obscuringCharacter: '*',
                 decoration: InputDecoration(
                     labelText: "Email",
                     hintText: "Email",
                     prefixIcon: Icon(Icons.email),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50))),
+                        borderRadius: BorderRadius.circular(50))
+                ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 50, left: 70, right: 70),
+              padding: EdgeInsets.only(top: 20, left: 70, right: 70),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "Password",
-                  hintText: "Password",
+                  hintText: "password",
                   prefixIcon: Icon(Icons.password),
-                  suffixIcon: Icon(Icons.visibility_off),
+                  suffixIcon:IconButton(onPressed: () {
+                    setState(() {
+                      if(showpass==true){
+                        showpass=false;
+                      }
+                      else{
+                        showpass=true;
+                      }
+                    });
+                  }, icon: Icon(showpass==true? Icons.visibility_off:Icons.visibility),),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50)),
                 ),
@@ -87,7 +83,7 @@ class _RegisterpageState extends State<Registerpage> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  top: 50, left: 70, right: 70, bottom: 50),
+                  top: 20, left: 70, right: 70, bottom: 50),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "Confirm password",
@@ -104,12 +100,8 @@ class _RegisterpageState extends State<Registerpage> {
                     textStyle:
                     TextStyle(fontSize: 20, fontWeight: FontWeight.w400)),
                 onPressed: () {
-                  final valid=Formkey.currentState!.validate();
-                  if(valid){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>loginpage()));
-                  }
-
-
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => loginpage()));
                 },
                 child: Text("Register")),
           ],

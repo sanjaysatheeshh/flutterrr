@@ -14,7 +14,7 @@ class stagex extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("staggeredrecylerview"),
+          title: Text("Staggeredrecylerview"),
           titleTextStyle: TextStyle(color: Colors.blue),
         ),
         backgroundColor: Colors.blueGrey,
@@ -37,7 +37,7 @@ class stagex extends StatelessWidget {
                               width: double.infinity,
                               child: Image(
                                 image: AssetImage(
-                                    "assets/images/pexels-jonathan-meyer-612999.jpg"),
+                                    "assets/images/waterfall1.jpg"),
                                 height: 80,
                                 width: 230,
                                 fit: BoxFit.cover,
@@ -87,7 +87,7 @@ class stagex extends StatelessWidget {
                                   height: 1200,
                                   width: 250,
                                   fit: BoxFit.cover),)),
-                      Text("rocky mountain national park"),
+                      Text("rocky park"),
                     ]))),
                 StaggeredGridTile.count(
                     crossAxisCellCount: 1,

@@ -7,11 +7,11 @@ void main(){
 
 class Gridviewbuilder extends StatelessWidget {
   var images = [
-    "assets/images/iage1.png",
-    "assets/images/iage1.png",
-    "assets/images/iage1.png",
-    "assets/images/iage1.png",
-    "assets/images/iage1.png"
+    "assets/images/apple.png",
+    "assets/images/apple.png",
+    "assets/images/apple.png",
+    "assets/images/apple.png",
+    "assets/images/apple.png"
   ];
   var name = ["home", "facebook", "settings", "whatsapp", "instagram"];
   var clr=[Colors.blue,Colors.green,Colors.red,Colors.amberAccent,Colors.deepPurple];

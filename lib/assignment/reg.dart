@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,16 +5,17 @@ import 'loginp.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Registerpage(),
+    home: Regpage(),
   ));
 }
 
-class Registerpage extends StatefulWidget {
+class Regpage extends StatefulWidget {
   @override
-  State<Registerpage> createState() => _RegisterpageState();
-}
+  State<StatefulWidget> createState()=>RegpageState();
 
-class _RegisterpageState extends State<Registerpage> {
+  }
+
+class RegpageState extends State<Regpage> {
   GlobalKey<FormState>Formkey=GlobalKey();
   bool Showpass= true;
   @override
@@ -34,8 +33,8 @@ class _RegisterpageState extends State<Registerpage> {
                   "Register Page",
                   style: TextStyle(
                       fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green),
+                      fontWeight: FontWeight.w300,
+                      color: Colors.black),
                 )),
             Padding(
               padding: EdgeInsets.only(top: 50, left: 70, right: 70),
@@ -62,8 +61,6 @@ class _RegisterpageState extends State<Registerpage> {
             Padding(
               padding: EdgeInsets.only(top: 50, left: 70, right: 70),
               child: TextField(
-                obscureText: Showpass,
-                obscuringCharacter: '*',
                 decoration: InputDecoration(
                     labelText: "Email",
                     hintText: "Email",
@@ -75,6 +72,8 @@ class _RegisterpageState extends State<Registerpage> {
             Padding(
               padding: EdgeInsets.only(top: 50, left: 70, right: 70),
               child: TextField(
+                obscureText: Showpass,
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
                   labelText: "Password",
                   hintText: "Password",
@@ -89,10 +88,13 @@ class _RegisterpageState extends State<Registerpage> {
               padding: const EdgeInsets.only(
                   top: 50, left: 70, right: 70, bottom: 50),
               child: TextField(
+                obscureText: Showpass,
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
                   labelText: "Confirm password",
                   hintText: "Confirm password",
                   prefixIcon: Icon(Icons.password),
+                  suffixIcon: Icon(Icons.visibility_off),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50)),
                 ),
@@ -106,10 +108,8 @@ class _RegisterpageState extends State<Registerpage> {
                 onPressed: () {
                   final valid=Formkey.currentState!.validate();
                   if(valid){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>loginpage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>loginp()));
                   }
-
-
                 },
                 child: Text("Register")),
           ],

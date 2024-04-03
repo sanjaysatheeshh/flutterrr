@@ -13,7 +13,7 @@ class loginpage extends StatelessWidget{
 
             const Padding(
               padding: EdgeInsets.only(top: 100,),
-              child: Image(image: AssetImage("assets/images/image2.jpg"),height: 100,width: 100,),
+              child: Image(image: AssetImage("assets/images/window.jpg"),height: 100,width: 100,),
             ),
             Padding(
               padding: EdgeInsets.only(top: 20,left: 70,right: 70),

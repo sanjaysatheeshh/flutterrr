@@ -9,7 +9,7 @@ void main(){
 class listviewcustom extends StatelessWidget{
   var name=["sanju","nishin","sins","bindya","sahal"];
   var phone=["9898989877","1234567822","9876543211","3456789123","9989897876"];
-  var images=["assets/images/pexels-stephen-niemeier-176837.jpg","assets/images/pexels-pixabay-258174.jpg","assets/images/image2.jpg","assets/images/iage1.png","assets/images/pexels-pixabay-258174.jpg"];
+  var images=["assets/images/sandiegoboard.jpg","assets/images/pexels-pixabay-258174.jpg","assets/images/window.jpg","assets/images/apple.png","assets/images/pexels-pixabay-258174.jpg"];
   var color=[Colors.blue,Colors.green,Colors.red,Colors.amberAccent,Colors.deepPurple];
   var clr=[800,700,600,500,400];
   @override

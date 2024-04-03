@@ -5,42 +5,42 @@ import 'package:flutter/material.dart';
 
 import 'loginp.dart';
 
-
-void main() {
-  runApp(MaterialApp(
-    home: Splashscreen(),
-  ));
+void main(){
+  runApp(MaterialApp(home: splash(),));
 }
 
-class Splashscreen extends StatefulWidget {
+class splash extends StatefulWidget{
   @override
-  State<Splashscreen> createState() => _SpalshscreenState();
+  State<splash> createState() => splashState();
 }
 
-class _SpalshscreenState extends State<Splashscreen> {
+class splashState extends State<splash> {
   @override
-  void initState() {
-    Timer(Duration(seconds: 5), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>loginpage()));
-    });
+  void initstate(){
+    Timer(Duration(seconds: 2),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>loginp()));
+    }
+    );
     super.initState();
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/glitter.jpeg"),
-                fit: BoxFit.fill)),
-        child: Center(
-          child: Image(
-            image: AssetImage("assets/images/fb.png"),
-            height: 150,
-            width: 150,
-          ),
-        ),
-      ),
-    );
+   return Scaffold(
+     body: Container(
+       decoration: BoxDecoration(
+         image: DecorationImage(
+           image: AssetImage("assets/images/window.jpg"),
+           fit: BoxFit.fill
+         )),
+       child: Center(
+         child: Image(
+           image: AssetImage("assets/images/pexels-adi-k-2382868.jpg"),
+           fit: BoxFit.fill,
+           height: 150,width: 150,
+
+         ),
+       ),
+     ),
+     );
   }
 }

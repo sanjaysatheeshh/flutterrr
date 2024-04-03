@@ -17,7 +17,8 @@ class stagexx extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                color: Colors.blue[100]),
+                color: Colors.blue[100]
+            ),
             width: 500,
             height: 750,
           ),
@@ -38,7 +39,8 @@ class stagexx extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.w700,
                   color: Colors.white,
-                  fontSize: 25),
+                  fontSize: 25
+              ),
             ),
             left: 50,
             top: 70,
@@ -49,7 +51,8 @@ class stagexx extends StatelessWidget {
                 child: Text(
                   "Edit Your Profile",
                   style: TextStyle(color: Colors.grey, fontSize: 17),
-                )),
+                )
+            ),
             top: 100,
             left: 39,
           ),
@@ -59,10 +62,7 @@ class stagexx extends StatelessWidget {
             child: CircleAvatar(
               radius: 50,
               backgroundImage: AssetImage(
-                "assets/images/pexels-creation-hill-1681010.jpg",
-              ),
-            ),
-          ),
+                "assets/images/pexels-creation-hill-1681010.jpg",),),),
           Container(
             child: ListView(
               children: [
@@ -73,7 +73,8 @@ class stagexx extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w500,
-                        color: Colors.blue[900]),
+                        color: Colors.blue[900]
+                    ),
                   ),
                 ),
                 Padding(
@@ -84,7 +85,8 @@ class stagexx extends StatelessWidget {
                         height: 60,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10)
+                          ),
                           child: Wrap(
                             children: [
                               Padding(
@@ -100,11 +102,12 @@ class stagexx extends StatelessWidget {
                                   "My Account",
                                   style: TextStyle(fontWeight: FontWeight.w900),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
-                      )),
+                      ),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 20),
@@ -114,7 +117,8 @@ class stagexx extends StatelessWidget {
                         height: 60,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10)
+                          ),
                           child: Wrap(
                             children: [
                               Padding(
@@ -130,11 +134,12 @@ class stagexx extends StatelessWidget {
                                   "Dashboard",
                                   style: TextStyle(fontWeight: FontWeight.w900),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
-                      )),
+                      ),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 20),
@@ -144,7 +149,8 @@ class stagexx extends StatelessWidget {
                         height: 60,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10)
+                          ),
                           child: Wrap(
                             children: [
                               Padding(
@@ -164,7 +170,8 @@ class stagexx extends StatelessWidget {
                             ],
                           ),
                         ),
-                      )),
+                      ),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 20),
@@ -194,11 +201,12 @@ class stagexx extends StatelessWidget {
                             ],
                           ),
                         ),
-                      )),
+                      ),
+                  ),
                 )
               ],
             ),
-          )
+          ),
         ],
       ),
     );

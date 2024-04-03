@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import 'loginpage.dart';
 
-
 void main() {
   runApp(MaterialApp(
     home: Splashscreen(),
@@ -14,13 +13,13 @@ void main() {
 
 class Splashscreen extends StatefulWidget {
   @override
-  State<Splashscreen> createState() => _SpalshscreenState();
+  State<Splashscreen> createState() => _SplashscreenState();
 }
 
-class _SpalshscreenState extends State<Splashscreen> {
+class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 5), () {
+    Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>loginpage()));
     });
     super.initState();
@@ -31,11 +30,11 @@ class _SpalshscreenState extends State<Splashscreen> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/glitter.jpeg"),
+                image: AssetImage("assets/images/sandiegoboard.jpg"),
                 fit: BoxFit.fill)),
         child: Center(
           child: Image(
-            image: AssetImage("assets/images/fb.png"),
+            image: AssetImage("assets/images/pexels-pixabay-460672.jpg"),
             height: 150,
             width: 150,
           ),
